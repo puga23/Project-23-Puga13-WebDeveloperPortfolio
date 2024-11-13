@@ -5,6 +5,7 @@
 
 body {
   font-family: "Ubuntu", sans-serif;
+  background-color: rgb(101, 170, 161);
 }
 
 header {
@@ -355,6 +356,109 @@ header {
           @include media-m;
           padding-left: 8px;
         }
+      }
+    }
+  }
+}
+
+// ========= Developer section
+.developer-section {
+  width: 100%;
+  max-width: 1920px;
+  @include container(0 auto, 64px 31px);
+  background-color: $color-bg1;
+  position: relative;
+
+  h1 {
+    display: none;
+    @include bg-text-u;
+    color: $color-brand2;
+    text-align: center;
+    margin: 64px 0;
+  }
+
+  .left-side-icons-list {
+    max-width: 64px;
+    min-height: 376px;
+    border: 1px solid $color-white;
+    border-radius: 40px;
+    background-color: $color-bg2;
+
+    // @include d-flex();
+    display: none;
+
+    flex-direction: column;
+    padding: 8px 12px;
+    position: fixed;
+  }
+
+  .developer-container {
+    .profile-section {
+      .profile-card {
+        max-width: 320px;
+        @include container(0 auto, 37px 22px 37px 24px);
+        border: 4px solid $color-white;
+        border-radius: 160px 0 160px 0;
+        box-shadow: -4px -4px 2px 0px $color-brand1;
+
+        .img-circle {
+          width: 96px;
+          height: 96px;
+          @include container();
+        }
+
+        .name {
+          @include logo-m;
+          color: $color-white;
+          text-align: center;
+          margin-top: 16px;
+        }
+
+        .profession {
+          @include code-m;
+          color: $color-white;
+          text-align: center;
+        }
+      }
+
+      .contact-list {
+        display: flex;
+        flex-direction: column;
+        row-gap: 16px;
+        margin: 32px 0;
+
+        li {
+          @include d-flex();
+          justify-content: start;
+          column-gap: 18px;
+
+          img {
+            // margin-right: 18px;
+          }
+
+          p,
+          a {
+            @include code-m;
+            color: $color-white;
+          }
+        }
+
+        .tool-list {
+          max-width: 231px;
+
+          p {
+            width: fit-content;
+            height: fit-content;
+            background-color: $color-brand1;
+            border-radius: 8px;
+            padding: 0 8px;
+            color: $color-bg1;
+          }
+        }
+      }
+
+      button {
+        min-width: 227px;
       }
     }
   }
