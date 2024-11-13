@@ -1,0 +1,197 @@
+.btn-green {
+  width: 212px;
+  height: 56px;
+  border: none;
+  border-radius: 32px;
+  padding: 16px 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  color: $color-bg1;
+  background-color: $color-brand1;
+
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+}
+
+.btn-white {
+  width: 212px;
+  height: 56px;
+  border: none;
+  border-radius: 32px;
+  padding: 16px 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  color: $color-bg1;
+  background-color: $color-white;
+
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+}
+
+.btn-black {
+  width: 212px;
+  height: 56px;
+  border: none;
+  border-radius: 32px;
+  padding: 16px 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  color: $color-bg1;
+  background-color: $color-brand1;
+
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+}
+
+.btn-black {
+  width: 212px;
+  height: 56px;
+  border: 2px solid $color-brand1;
+  border-radius: 32px;
+  padding: 16px 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  color: $color-white;
+  background-color: $color-bg1;
+
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+}
+
+@mixin d-flex() {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@mixin container($margin: 0 auto, $padding: 0) {
+  margin: $margin;
+  padding: $padding;
+}
+
+// font-family: "Ubuntu" styles
+
+@mixin bg-text-u() {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 400;
+  font-size: 117px;
+  line-height: 134px;
+}
+
+@mixin h1-u() {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 400;
+  font-size: 64px;
+  line-height: 72px;
+}
+
+@mixin h2-u() {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 36px;
+}
+
+@mixin button-u() {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+}
+
+@mixin article-u() {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 32px;
+  margin-bottom: 32px;
+}
+
+@mixin para-u() {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 18px;
+  margin-bottom: 16px;
+}
+
+@mixin label-u-m() {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+}
+
+@mixin label-u-l() {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 16px;
+}
+
+// font-family: "IBM Plex Mono" styles
+@mixin number-m() {
+  font-family: "IBM Plex Mono", monospace;
+  font-weight: 500;
+  font-size: 48px;
+  line-height: 62px;
+}
+
+@mixin h2-m() {
+  font-family: "IBM Plex Mono", monospace;
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 42px;
+}
+
+@mixin logo-m() {
+  font-family: "IBM Plex Mono", monospace;
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 42px;
+}
+
+@mixin menu-m() {
+  font-family: "IBM Plex Mono", monospace;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 32px;
+}
+
+@mixin media-m() {
+  font-family: "IBM Plex Mono", monospace;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+@mixin para-m() {
+  font-family: "IBM Plex Mono", monospace;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  margin-bottom: 16px;
+}
+
+@mixin code-m() {
+  font-family: "IBM Plex Mono", monospace;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+}

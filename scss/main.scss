@@ -1,0 +1,333 @@
+@import "./_reset";
+@import "./_variables";
+@import "./_utilities";
+@import "https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap";
+
+body {
+  font-family: "Ubuntu", sans-serif;
+}
+
+header {
+  background-color: $color-bg1;
+
+  nav {
+    @include d-flex();
+    @include container(0 auto, 24px);
+
+    * {
+      @include media-m;
+      color: $color-white;
+      text-decoration: none;
+    }
+
+    a,
+    li {
+      @include d-flex();
+      justify-content: center;
+    }
+
+    .logo {
+      span {
+        color: $color-brand1;
+      }
+    }
+  }
+
+  .nav-bar-right-side {
+    @include d-flex();
+    max-width: 139px;
+    width: 100%;
+
+    ul {
+      @include d-flex();
+    }
+
+    .nav-menu {
+      max-width: 103px;
+      width: 100%;
+
+      li:first-child a {
+        color: $color-brand1;
+      }
+    }
+
+    .search-bar {
+      display: none;
+    }
+
+    .social-links {
+      display: none;
+
+      span {
+        display: none;
+      }
+    }
+  }
+}
+
+/* ================header On screens that are 768px or more */
+@media screen and (min-width: 768px) {
+  header {
+    // background-color: $color-bg1;
+
+    nav {
+      // @include d-flex();
+      @include container(0 auto, 24px 32px);
+
+      // * {
+      //   @include media-m;
+      //   color: $color-white;
+      //   text-decoration: none;
+      // }
+
+      // a,
+      // li {
+      //   @include d-flex();
+      //   justify-content: center;
+      // }
+
+      .logo {
+        @include menu-m;
+
+        span {
+          @include menu-m;
+
+          //   color: $color-brand1;
+        }
+      }
+    }
+
+    .nav-bar-right-side {
+      // @include d-flex();
+      max-width: 391px;
+      // width: 100%;
+
+      ul {
+        // @include d-flex();
+      }
+
+      .nav-menu {
+        max-width: 119px;
+        // width: 100%;
+
+        li:first-child a {
+          // color: $color-brand1;
+        }
+      }
+
+      .search-bar {
+        // display: none;
+      }
+
+      .only-search-icon {
+        // width: 20px;
+        // height: 20px;
+      }
+
+      .social-links {
+        max-width: 124px;
+        width: 100%;
+        @include d-flex;
+
+        // span {
+        //   display: none;
+        // }
+      }
+    }
+  }
+}
+
+/* ========header On screens that are 1280px or more ================================================= */
+@media screen and (min-width: 1280px) {
+  header {
+    // background-color: $color-bg1;
+
+    nav {
+      // @include d-flex();
+      @include container(0 auto, 64px 128px);
+
+      * {
+        @include menu-m;
+        // color: $color-white;
+        // text-decoration: none;
+      }
+
+      // a,
+      // li {
+      //   @include d-flex();
+      //   justify-content: center;
+      // }
+
+      .logo {
+        @include logo-m;
+
+        span {
+          @include logo-m;
+
+          //   color: $color-brand1;
+        }
+      }
+    }
+
+    .nav-bar-right-side {
+      // @include d-flex();
+      max-width: 618px;
+      // width: 100%;
+
+      ul {
+        // @include d-flex();
+      }
+
+      .nav-menu {
+        max-width: 162px;
+        // width: 100%;
+
+        li:first-child a {
+          // color: $color-brand1;
+        }
+      }
+
+      .search-bar {
+        width: 204px;
+        height: 32px;
+        background-color: $color-white;
+        border: none;
+        border-radius: 24px;
+        @include d-flex();
+        position: relative;
+
+        input {
+          width: 100%;
+          height: 100%;
+          border-radius: 24px;
+          border: none;
+        }
+
+        button {
+          border: none;
+          height: 20px;
+          @include d-flex();
+          justify-content: center;
+          border-radius: 24px;
+          background: $color-white;
+          position: absolute;
+          right: 0;
+          cursor: pointer;
+        }
+      }
+
+      .only-search-icon {
+        display: none;
+      }
+
+      .social-links {
+        // max-width: 124px;
+        // width: 100%;
+        // @include d-flex;
+
+        // span {
+        //   display: none;
+        // }
+      }
+    }
+  }
+}
+
+/* ========header On screens that are 1920px or more ================================================= */
+@media screen and (min-width: 1920px) {
+  header {
+    // background-color: $color-bg1;
+
+    nav {
+      // @include d-flex();
+      // @include container(0 auto, 64px 128px);
+
+      * {
+        // @include menu-m;
+        // color: $color-white;
+        // text-decoration: none;
+      }
+
+      // a,
+      // li {
+      //   @include d-flex();
+      //   justify-content: center;
+      // }
+
+      .logo {
+        // @include logo-m;
+
+        span {
+          // @include logo-m;
+
+          //   color: $color-brand1;
+        }
+      }
+    }
+
+    .nav-bar-right-side {
+      // @include d-flex();
+      max-width: 855px;
+      // width: 100%;
+
+      ul {
+        // @include d-flex();
+      }
+
+      .nav-menu {
+        max-width: 162px;
+        // width: 100%;
+
+        li:first-child a {
+          // color: $color-brand1;
+        }
+      }
+
+      // .search-bar {
+      //   width: 204px;
+      //   height: 32px;
+      //   background-color: $color-white;
+      //   border: none;
+      //   border-radius: 24px;
+      //   @include d-flex();
+      //   position: relative;
+
+      //   input {
+      //     width: 100%;
+      //     height: 100%;
+      //     border-radius: 24px;
+      //     border: none;
+      //   }
+
+      //   button {
+      //     border: none;
+      //     height: 20px;
+      //     @include d-flex();
+      //     justify-content: center;
+      //     border-radius: 24px;
+      //     background: $color-white;
+      //     position: absolute;
+      //     right: 0;
+      //     cursor: pointer;
+      //   }
+      // }
+
+      // .only-search-icon {
+      //   display: none;
+      // }
+
+      .social-links {
+        max-width: 361px;
+        // width: 100%;
+        // @include d-flex;
+
+        span {
+          @include d-flex();
+          justify-content: center;
+          @include media-m;
+          padding-left: 8px;
+        }
+      }
+    }
+  }
+}
