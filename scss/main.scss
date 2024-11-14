@@ -5,7 +5,7 @@
 
 body {
   font-family: "Ubuntu", sans-serif;
-  background-color: rgb(101, 170, 161);
+  background-color: aqua;
 }
 
 header {
@@ -68,16 +68,15 @@ header {
 
   .line-container {
     max-width: 1920px;
-    padding: 0 24px;
     border: 0;
-    margin: 0;
+    @include container(0 auto, 0 24px);
 
     .header-bottom-line {
       width: 100%;
       height: 1px;
       border: none;
       background-color: $color-grey;
-      margin: 0;
+      @include container(0 auto, 0 24px);
     }
   }
 }
@@ -393,7 +392,13 @@ header {
   }
 
   .developer-container {
+    @include d-flex();
+    flex-wrap: wrap;
+    gap: 64px;
+
     .profile-section {
+      @include container;
+
       .profile-card {
         max-width: 320px;
         @include container(0 auto, 37px 22px 37px 24px);
@@ -459,6 +464,97 @@ header {
 
       button {
         min-width: 227px;
+      }
+    }
+
+    .text-section {
+      @include container;
+      @include d-flex;
+      flex-wrap: wrap;
+      gap: 64px;
+
+      .text-box {
+        max-width: 745px;
+        width: 100%;
+        @include container;
+        background-color: rgb(185, 107, 11);
+
+        .text-h2 {
+          span {
+            @include code-m;
+            color: $color-brand2;
+          }
+          h2 {
+            @include h2-u;
+            color: $color-white;
+            padding-left: 16px;
+
+            .name {
+              @include h2-u;
+              color: $color-brand2;
+            }
+          }
+
+          p {
+            @include para-m;
+            color: $color-white;
+            margin-top: 16px;
+          }
+
+          .paragraph-box {
+            margin-top: 16px;
+
+            > p {
+              padding-left: 24px;
+            }
+
+            .talk-box {
+              @include d-flex();
+              width: 272px;
+
+              p {
+                padding-left: 24px;
+                @include h2-m;
+                color: $color-brand1;
+              }
+
+              a {
+                width: 40px;
+                height: 40px;
+                border: none;
+                border-radius: 40px;
+                padding: 8px;
+                background-color: $color-grey;
+              }
+            }
+          }
+        }
+      }
+
+      .summery-box {
+        width: 215px;
+        height: 378px;
+        border-radius: 80px;
+        @include d-flex;
+        flex-direction: column;
+        @include container(0 auto, 48px 32px);
+        background-color: $color-bg2;
+
+        li {
+          @include d-flex;
+          width: 100%;
+
+          p {
+            @include para-m;
+            color: $color-white;
+            margin: 0;
+          }
+          span {
+            @include number-m;
+            color: $color-brand1;
+            margin-right: 16px;
+          }
+        }
       }
     }
   }
